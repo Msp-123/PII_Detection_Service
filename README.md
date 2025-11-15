@@ -201,4 +201,5 @@ You can easily:
   - Multi-language support (EN/TR/DE/FR)
 
 ## Contributing
-Contributions are not open yet — the project is in early development. 
+Contributions are not open yet — the project is in early development.
+'''
