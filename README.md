@@ -7,6 +7,10 @@
   <img src="https://img.shields.io/badge/Privacy-First-black?style=for-the-badge" />
 </p>
 
+<p align="center">
+  <img width="220" src="https://svgshare.com/i/17RM.svg" alt="PII Detection Service Logo" />
+</p>
+
 
 # PII Detection Service
 
