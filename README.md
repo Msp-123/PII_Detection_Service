@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Local%20Only-No%20Cloud-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PII%20Detection-Enabled-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Presidio-Analyzer-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/BERT-NERModel-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Privacy-First-black?style=for-the-badge" />
+</p>
+
+
 # PII Detection Service
 
 A lightweight, customizable, and fully local **PII (Personally Identifiable Information) detection and redaction service** built with **FastAPI**, **Microsoft Presidio**, and a **BERT-based NER model**.
