@@ -116,10 +116,10 @@ cd PII_Detection_Service
 
 ### 2. Create & activate a virtual environment
 python -m venv venv
-# Windows
+### Windows
 venv\Scripts\activate
-# Linux / Mac
-# source venv/bin/activate
+### Linux / Mac
+### source venv/bin/activate
 
 ### 3. Install dependencies
 pip install -r requirements.txt
