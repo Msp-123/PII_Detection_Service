@@ -38,7 +38,7 @@ Currently supports **English**, with multi-language support planned for future v
 ---
 
 ## Project Structure
-```text
+```
 PII_Detection_Service/
 ├── app/
 │   ├── __init__.py
@@ -147,7 +147,7 @@ GET /health
 
 ## 2. Detect PII
 POST /detect
-
+```
 Request:
 {
   "text": "John Doe lives in New York. Email: john@example.com",
@@ -174,10 +174,10 @@ Response:
     }
   ]
 }
-
+```
 ### 3. Redact PII
 POST /redact
-
+```
 Request:
 {
   "text": "John Doe lives in New York.",
@@ -192,7 +192,7 @@ Response:
 {
   "masked_text": "{{PERSON}} lives in New York."
 }
-
+```
 ## Customization
 You can easily:
   - Add new regex recognizers
