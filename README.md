@@ -38,7 +38,7 @@ Currently supports **English**, with multi-language support planned for future v
 ---
 
 ## Project Structure
-
+```text
 PII_Detection_Service/
 ├── app/
 │   ├── __init__.py
@@ -62,8 +62,7 @@ PII_Detection_Service/
 └── setup.cfg
 
 __pycache__, virtual environments, and .env files are intentionally excluded via .gitignore.
-
----
+```
 
 ## Architecture Overview
 
