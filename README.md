@@ -17,7 +17,7 @@ Currently supports **English**, with multi-language support planned for future v
 
 ---
 
-## 🚀 Features
+## Features
 
 - **FastAPI** backend with high-performance asynchronous endpoints  
 - **Microsoft Presidio Analyzer** for rule-based PII detection  
