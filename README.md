@@ -37,10 +37,8 @@ Currently supports **English**, with multi-language support planned for future v
 
 ---
 
----
-
 ## Project Structure
-```text
+
 PII_Detection_Service/
 ├── app/
 │   ├── __init__.py
