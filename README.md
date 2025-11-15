@@ -8,7 +8,7 @@ Currently supports **English**, with multi-language support planned for future v
 
 ---
 
-## 🚀 Features
+## Features
 
 - **FastAPI** backend with high-performance asynchronous endpoints  
 - **Microsoft Presidio Analyzer** for rule-based PII detection  
@@ -54,6 +54,7 @@ PII_Detection_Service/
 
 __pycache__, virtual environments, and .env files are intentionally excluded via .gitignore.
 
+---
 ## Architecture Overview
 
 ### 1. BERT NER Recognizer
