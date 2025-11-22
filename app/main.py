@@ -15,7 +15,7 @@ def health():
 
 @app.post("/v1/detect", response_model=DetectResponse)
 def detect(req: DetectRequest, _=Depends(verify_api_key)):
-    # min_score: request’te varsa onu, yoksa ayarlardan al
+    # min_score: if it exists in the request, use it; otherwise, get it from the settings
     min_score = req.min_score or settings.min_score
 
     results = analyzer_engine.analyze(
@@ -49,7 +49,7 @@ def redact(req: RedactRequest, _=Depends(verify_api_key)):
         score_threshold=settings.min_score,
     )
 
-    # Sadece policy.entities_to_mask listesinde olanları al
+    # Only take those in the policy.entities_to_mask list
     if req.policy.entities_to_mask:
         filtered_results = [
             r for r in results if r.entity_type in req.policy.entities_to_mask
@@ -61,7 +61,7 @@ def redact(req: RedactRequest, _=Depends(verify_api_key)):
     operators = {}
 
     for e in filtered_results:
-        # "{{ENTITY_TYPE}}" -> "{{PERSON}}" gibi olsun diye
+        # "{{ENTITY_TYPE}}" -> "{{PERSON}}" 
         masked_value = req.policy.template.replace("ENTITY_TYPE", e.entity_type)
 
         operators[e.entity_type] = OperatorConfig(
@@ -69,7 +69,7 @@ def redact(req: RedactRequest, _=Depends(verify_api_key)):
             {"new_value": masked_value},
         )
 
-    # Fallback: tanımlanmayan entity türleri için
+    # Fallback: for undeclared entity types
     operators["DEFAULT"] = OperatorConfig(
         "replace",
         {"new_value": req.policy.template.replace("ENTITY_TYPE", "PII")},

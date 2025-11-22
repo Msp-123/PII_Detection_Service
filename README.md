@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Local%20Only-No%20Cloud-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PII%20Detection-Enabled-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Presidio-Analyzer-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/BERT-NERModel-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Privacy-First-black?style=for-the-badge" />
+</p>
+
 # PII Detection Service
 
 A lightweight, customizable, and fully local **PII (Personally Identifiable Information) detection and redaction service** built with **FastAPI**, **Microsoft Presidio**, and a **BERT-based NER model**.
@@ -26,10 +35,9 @@ Currently supports **English**, with multi-language support planned for future v
 - **Fully local processing** — no cloud API calls
 - Auto-generated API documentation via **Swagger UI** (`/docs`)
 
----
 
 ## Project Structure
-```text
+```
 PII_Detection_Service/
 ├── app/
 │   ├── __init__.py
@@ -53,6 +61,7 @@ PII_Detection_Service/
 └── setup.cfg
 
 __pycache__, virtual environments, and .env files are intentionally excluded via .gitignore.
+```
 
 ---
 ## Architecture Overview
@@ -107,10 +116,10 @@ cd PII_Detection_Service
 
 ### 2. Create & activate a virtual environment
 python -m venv venv
-# Windows
+### Windows
 venv\Scripts\activate
-# Linux / Mac
-# source venv/bin/activate
+### Linux / Mac
+### source venv/bin/activate
 
 ### 3. Install dependencies
 pip install -r requirements.txt
@@ -138,7 +147,7 @@ GET /health
 
 ## 2. Detect PII
 POST /detect
-
+```
 Request:
 {
   "text": "John Doe lives in New York. Email: john@example.com",
@@ -165,10 +174,10 @@ Response:
     }
   ]
 }
-
+```
 ### 3. Redact PII
 POST /redact
-
+```
 Request:
 {
   "text": "John Doe lives in New York.",
@@ -183,7 +192,7 @@ Response:
 {
   "masked_text": "{{PERSON}} lives in New York."
 }
-
+```
 ## Customization
 You can easily:
   - Add new regex recognizers
@@ -202,4 +211,4 @@ You can easily:
   - Multi-language support (EN/TR/DE/FR)
 
 ## Contributing
-Contributions are not open yet — the project is in early development. 
+Contributions are not open yet — the project is in early development.
