@@ -84,7 +84,7 @@ Located in: app/recognizers/regex_recognizers.py
 
 Includes:
   - EMAIL_ADDRESS
-  - PHONE_NUMBER-R (US format; will be enhanced)
+  - PHONE_NUMBER-R (US format)
   - US_SSN
 
 ### 3. Analyzer Engine Setup
