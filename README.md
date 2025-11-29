@@ -202,9 +202,8 @@ You can easily:
   - Extend the FastAPI endpoints
 
 ## Roadmap
-  - Turkish PII support
   - Device & domain-specific fine-tuned models
-  - Stronger phone number regex
+  - Stronger recognizers
   - Docker support
   - Unit & integration tests
   - API key authentication
